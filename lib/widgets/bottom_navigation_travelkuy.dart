@@ -45,7 +45,7 @@ class _BottomNavigationState extends State<BottomNavigationTravelkuy> {
                   : SvgPicture.asset('assets/icons/home.svg'),
               title: Text(
                 "Home",
-                style: bottomTextStyle,
+                style: TextStyle(color: Colors.black),
               )),
           // tab 2
           BottomNavigationBarItem(
@@ -54,7 +54,7 @@ class _BottomNavigationState extends State<BottomNavigationTravelkuy> {
                   : SvgPicture.asset('assets/icons/order.svg'),
               title: Text(
                 "order",
-                style: bottomTextStyle,
+                style: TextStyle(color: Colors.black),
               )),
           // tab 3
           BottomNavigationBarItem(

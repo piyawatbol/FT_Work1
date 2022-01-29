@@ -1,9 +1,12 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, prefer_final_fields
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, prefer_final_fields, unused_import, unused_field
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:work1/screen/home1.dart';
 import 'package:work1/screen/home2.dart';
 import 'package:work1/screen/home3.dart';
+import 'package:work1/widgets/bottom_navigation_travelkuy.dart';
 import 'package:work1/widgets/drawer_navigation.dart';
 
 void main() {
@@ -37,6 +40,8 @@ class _HomeState extends State<Home> {
     Home2(),
     Home3(),
   ];
+  var bottomTextStyle =
+      GoogleFonts.inter(fontSize: 15, fontWeight: FontWeight.bold);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,23 +52,39 @@ class _HomeState extends State<Home> {
         elevation: 0,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        //backgroundColor: Colors.blue,
         currentIndex: _currentIndex,
+        selectedItemColor: Colors.grey.shade800,
+        unselectedItemColor: Colors.black,
+        backgroundColor: Colors.transparent,
         type: BottomNavigationBarType.fixed,
-        iconSize: 32,
+        elevation: 0,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-          ),
+              icon: _currentIndex == 0
+                  ? SvgPicture.asset('assets/icons/home_colored.svg')
+                  : SvgPicture.asset('assets/icons/home.svg'),
+              title: Text(
+                "Home",
+                style: bottomTextStyle,
+              )),
+          // tab 2
           BottomNavigationBarItem(
-            icon: Icon(Icons.menu),
-            title: Text("Home"),
-          ),
+              icon: _currentIndex == 1
+                  ? SvgPicture.asset('assets/icons/order_colored.svg')
+                  : SvgPicture.asset('assets/icons/order.svg'),
+              title: Text(
+                "order",
+                style: bottomTextStyle,
+              )),
+          // tab 3
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded),
-            title: Text("Home"),
-          ),
+              icon: _currentIndex == 2
+                  ? SvgPicture.asset('assets/icons/account_colored.svg')
+                  : SvgPicture.asset('assets/icons/account.svg'),
+              title: Text(
+                "Account",
+                style: bottomTextStyle,
+              ))
         ],
         onTap: (index) {
           setState(() {
