@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class DrawerNavagation2 extends StatelessWidget {
   const DrawerNavagation2({Key? key}) : super(key: key);
+  final color = Colors.black;
   final profile =
       'https://s.isanook.com/ca/0/ui/279/1396205/download20190701165129_1562561119.jpg';
   final bg =
@@ -32,27 +33,39 @@ class DrawerNavagation2 extends StatelessWidget {
                     image: NetworkImage(bg), fit: BoxFit.cover)),
           ),
           ListTile(
-            leading: Icon(Icons.favorite),
+            leading: Icon(
+              Icons.favorite,
+              color: color,
+            ),
             title: Text('Favorites'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.people),
+            leading: Icon(
+              Icons.people,
+              color: color,
+            ),
             title: Text('Friends'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.share),
+            leading: Icon(
+              Icons.share,
+              color: color,
+            ),
             title: Text('Share'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.notifications),
+            leading: Icon(
+              Icons.notifications,
+              color: color,
+            ),
             title: Text('Notifications'),
             onTap: () {},
             trailing: ClipOval(
               child: Container(
-                color: Colors.red,
+                color: Colors.red.shade800,
                 width: 20,
                 height: 20,
                 child: Center(
@@ -64,18 +77,27 @@ class DrawerNavagation2 extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.settings),
+            leading: Icon(
+              Icons.settings,
+              color: color,
+            ),
             title: Text('Settings'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.description),
+            leading: Icon(
+              Icons.description,
+              color: color,
+            ),
             title: Text('Policies'),
             onTap: () {},
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
+            leading: Icon(
+              Icons.exit_to_app,
+              color: color,
+            ),
             title: Text('Log Out'),
             onTap: () {},
           )
