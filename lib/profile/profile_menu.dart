@@ -21,20 +21,22 @@ class ProfileMenu extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           padding: EdgeInsets.all(20),
-          color: Colors.grey.shade800,
+          color: Colors.redAccent.shade700,
           onPressed: press,
           child: Row(
             children: [
               SvgPicture.asset(
                 icon,
-                width: 22,
-                color: Colors.red.shade400,
+                width: 27,
+                color: Colors.black,
               ),
               SizedBox(
                 width: 20,
               ),
               Expanded(
-                  child: Text(text, style: TextStyle(color: Colors.white))),
+                  child: Text(text,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold))),
               Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,
