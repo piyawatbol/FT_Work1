@@ -19,7 +19,11 @@ class Crad extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image.network(image),
+          Image.network(
+            image,
+            width: 128,
+            height: 128,
+          ),
           SizedBox(
             height: 5,
           ),

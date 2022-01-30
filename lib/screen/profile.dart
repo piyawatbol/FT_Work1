@@ -15,36 +15,55 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ProfilePic(),
-        SizedBox(height: 25),
-        ProfileMenu(
-          icon: 'assets/icons/user.svg',
-          press: () {},
-          text: 'My Acount',
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text(
+          'PROFILE',
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
         ),
-        ProfileMenu(
-          icon: 'assets/icons/noti.svg',
-          press: () {},
-          text: 'Notification',
-        ),
-        ProfileMenu(
-          icon: 'assets/icons/Settings.svg',
-          press: () {},
-          text: 'Settings',
-        ),
-        ProfileMenu(
-          icon: 'assets/icons/question.svg',
-          press: () {},
-          text: 'Help Center',
-        ),
-        ProfileMenu(
-          icon: 'assets/icons/logout.svg',
-          press: () {},
-          text: 'Log Out',
-        ),
-      ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Column(
+              children: [
+                ProfilePic(),
+                SizedBox(height: 23),
+                ProfileMenu(
+                  icon: 'assets/icons/user.svg',
+                  press: () {},
+                  text: 'My Acount',
+                ),
+                ProfileMenu(
+                  icon: 'assets/icons/noti.svg',
+                  press: () {},
+                  text: 'Notification',
+                ),
+                ProfileMenu(
+                  icon: 'assets/icons/Settings.svg',
+                  press: () {},
+                  text: 'Settings',
+                ),
+                ProfileMenu(
+                  icon: 'assets/icons/question.svg',
+                  press: () {},
+                  text: 'Help Center',
+                ),
+                ProfileMenu(
+                  icon: 'assets/icons/logout.svg',
+                  press: () {},
+                  text: 'Log Out',
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

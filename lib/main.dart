@@ -45,34 +45,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       drawer: DrawerNavagation2(),
       //NavigationDrawer(),
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
-        title: Text(
-          "WELCOME",
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.black38,
-            ),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(
-              Icons.filter_list,
-              color: Colors.black38,
-            ),
-            onPressed: () {},
-          ),
-        ],
-        elevation: 0,
-      ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         selectedItemColor: Colors.grey.shade800,

@@ -14,10 +14,49 @@ class Home2 extends StatefulWidget {
 class _Home2State extends State<Home2> {
   final image =
       'https://icon-library.com/images/create-icon-free/create-icon-free-18.jpg';
+  final image1 =
+      'https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png';
+  final image2 = 'https://www.obg.eu.com/img/technologies/react.png';
+  final image3 =
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh7HwVz9h18DrB8OeLJ1oUyWw6JPIBqfxDUEiFi_804PEIQxzvfuW5p0eQ3inRMifes4s&usqp=CAU';
+  final image4 =
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYlEA6Vsz0fqBzwPvPnhncrBwAXizgKMXqSNQmLLctUOtagnhT9U2b9zWAAvFBo4jfAYA&usqp=CAU';
+  final image5 =
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png';
+  final image6 =
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg55-xLM8wPpZZPhee03fEfgpVFGv_JylOm3lBCMYou6UbOlcyWZDebAid7ncH-Pxc20E&usqp=CAU';
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          "WELCOME",
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.search,
+              color: Colors.black38,
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.filter_list,
+              color: Colors.black38,
+            ),
+            onPressed: () {},
+          ),
+        ],
+        elevation: 0,
+      ),
       body: Stack(
         children: [
           Container(
@@ -73,21 +112,26 @@ class _Home2State extends State<Home2> {
                       primary: false,
                       children: <Widget>[
                         Crad(
-                          image: image,
-                          title: 'dog1',
+                          image: image1,
+                          title: 'Flutter',
                         ),
                         Crad(
-                          image: image,
-                          title: 'dog2',
+                          image: image2,
+                          title: 'React',
                         ),
                         Crad(
-                          image: image,
-                          title: 'dog3',
+                          image: image3,
+                          title: 'HTML',
                         ),
                         Crad(
-                          image: image,
-                          title: 'dog4',
+                          image: image4,
+                          title: 'CSS',
                         ),
+                        Crad(
+                          image: image5,
+                          title: 'Python',
+                        ),
+                        Crad(image: image6, title: 'Raspberry PI'),
                       ],
                     ),
                   ),
