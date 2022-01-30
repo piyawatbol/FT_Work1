@@ -12,8 +12,10 @@ class Home3 extends StatefulWidget {
 class _Home3State extends State<Home3> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('home3'),
+    return Center(
+      child: Container(
+        child: Text('Home1'),
+      ),
     );
   }
 }

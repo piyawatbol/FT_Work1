@@ -3,11 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:work1/screen/home1.dart';
+import 'package:work1/screen/profile.dart';
 import 'package:work1/screen/home2.dart';
 import 'package:work1/screen/home3.dart';
-import 'package:work1/widgets/bottom_navigation_travelkuy.dart';
+
 import 'package:work1/widgets/drawer_navigation.dart';
+import 'package:work1/widgets/drawer_navigation2.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,21 +35,42 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
-
-  final tabs = [
-    Home1(),
-    Home2(),
-    Home3(),
-  ];
   var bottomTextStyle =
       GoogleFonts.inter(fontSize: 15, fontWeight: FontWeight.bold);
+
+  final tabs = [Home2(), Home3(), Profile()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavigationDrawer(),
+      drawer: DrawerNavagation2(),
+      //NavigationDrawer(),
       appBar: AppBar(
-        backgroundColor: Colors.indigo.shade900,
-        title: Text("HOME"),
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          "WELCOME",
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.search,
+              color: Colors.black38,
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.filter_list,
+              color: Colors.black38,
+            ),
+            onPressed: () {},
+          ),
+        ],
         elevation: 0,
       ),
       bottomNavigationBar: BottomNavigationBar(
