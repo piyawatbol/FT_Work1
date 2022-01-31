@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:work1/data/image.dart';
 
 class ProfilePic extends StatelessWidget {
   const ProfilePic({
@@ -18,8 +19,7 @@ class ProfilePic extends StatelessWidget {
         overflow: Overflow.visible,
         children: [
           CircleAvatar(
-            backgroundImage: NetworkImage(
-                "https://s.isanook.com/ca/0/ui/279/1396205/download20190701165129_1562561119.jpg"),
+            backgroundImage: NetworkImage(imageProfile),
           ),
           Positioned(
             right: -10,

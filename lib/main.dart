@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:work1/screen/profile.dart';
+import 'package:work1/screen/home1.dart';
 import 'package:work1/screen/home2.dart';
-import 'package:work1/screen/home3.dart';
 
 import 'package:work1/widgets/drawer_navigation.dart';
 import 'package:work1/widgets/drawer_navigation2.dart';
@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          textTheme: TextTheme(bodyText2: TextStyle(color: Colors.white))),
       home: Home(),
     );
   }
@@ -35,10 +37,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
-  var bottomTextStyle =
-      GoogleFonts.inter(fontSize: 15, fontWeight: FontWeight.bold);
+  final bottomTextStyle = TextStyle(fontSize: 15, fontWeight: FontWeight.bold);
 
-  final tabs = [Home2(), Home3(), Profile()];
+  final tabs = [Home1(), Home2(), Profile()];
 
   @override
   Widget build(BuildContext context) {
@@ -48,15 +49,20 @@ class _HomeState extends State<Home> {
 
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.grey.shade800,
-        unselectedItemColor: Colors.black,
-        backgroundColor: Colors.transparent,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
-        elevation: 0,
+        showUnselectedLabels: true,
+        selectedFontSize: 15,
+        unselectedFontSize: 10,
+        elevation: 10,
         items: [
           BottomNavigationBarItem(
               icon: _currentIndex == 0
-                  ? SvgPicture.asset('assets/icons/home_colored.svg')
+                  ? SvgPicture.asset(
+                      'assets/icons/home_colored.svg',
+                    )
                   : SvgPicture.asset('assets/icons/home.svg'),
               title: Text(
                 "Home",
@@ -68,7 +74,7 @@ class _HomeState extends State<Home> {
                   ? SvgPicture.asset('assets/icons/order_colored.svg')
                   : SvgPicture.asset('assets/icons/order.svg'),
               title: Text(
-                "order",
+                "Food",
                 style: bottomTextStyle,
               )),
           // tab 3

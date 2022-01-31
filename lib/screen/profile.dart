@@ -18,12 +18,15 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text(
-          'PROFILE',
-          style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
+        title: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Text(
+            'PROFILE',
+            style: TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
+          ),
         ),
       ),
       body: Column(
