@@ -121,7 +121,7 @@ class _Home1State extends State<Home1> {
                         Crad(image: image6, title: 'Raspberry PI'),
                         Crad(
                           image: imagewhite,
-                          title: 'Python',
+                          title: '',
                         ),
                         Crad(
                           image: imagewhite,

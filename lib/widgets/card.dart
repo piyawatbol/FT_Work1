@@ -21,15 +21,16 @@ class Crad extends StatelessWidget {
         children: <Widget>[
           Image.network(
             image,
-            width: 128,
-            height: 128,
+            width: 124,
+            height: 124,
           ),
           SizedBox(
             height: 5,
           ),
           Text(
             title,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.black, fontSize: 15),
           )
         ],
       ),
