@@ -58,33 +58,27 @@ class _HomeState extends State<Home> {
         elevation: 10,
         items: [
           BottomNavigationBarItem(
-              icon: _currentIndex == 0
-                  ? SvgPicture.asset(
-                      'assets/icons/home_colored.svg',
-                    )
-                  : SvgPicture.asset('assets/icons/home.svg'),
-              title: Text(
-                "Home",
-                style: bottomTextStyle,
-              )),
+            icon: _currentIndex == 0
+                ? SvgPicture.asset(
+                    'assets/icons/home_colored.svg',
+                  )
+                : SvgPicture.asset('assets/icons/home.svg'),
+            label: "Home",
+          ),
           // tab 2
           BottomNavigationBarItem(
-              icon: _currentIndex == 1
-                  ? SvgPicture.asset('assets/icons/order_colored.svg')
-                  : SvgPicture.asset('assets/icons/order.svg'),
-              title: Text(
-                "Food",
-                style: bottomTextStyle,
-              )),
+            label: 'home2',
+            icon: _currentIndex == 1
+                ? SvgPicture.asset('assets/icons/order_colored.svg')
+                : SvgPicture.asset('assets/icons/order.svg'),
+          ),
           // tab 3
           BottomNavigationBarItem(
-              icon: _currentIndex == 2
-                  ? SvgPicture.asset('assets/icons/account_colored.svg')
-                  : SvgPicture.asset('assets/icons/account.svg'),
-              title: Text(
-                "Account",
-                style: bottomTextStyle,
-              ))
+            label: 'home3',
+            icon: _currentIndex == 2
+                ? SvgPicture.asset('assets/icons/account_colored.svg')
+                : SvgPicture.asset('assets/icons/account.svg'),
+          )
         ],
         onTap: (index) {
           setState(() {
